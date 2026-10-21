@@ -182,9 +182,16 @@
             }
             .gallery-item img {
                 width: 100%;
-                height: 220px;
-                /* ВОТ ЭТА СТРОКА ПРИСПУСКАЕТ ФОТО НА ТЕЛЕФОНЕ */
-                object-position: center 30%; 
+                height: 300px; /* Квадратная-ish форма */
+                object-fit: cover;
+                /* Здесь двигаем кадр: 20% для первого фото, 50% для второго */
+            }
+            /* Индивидуальный сдвиг для каждого фото */
+            .gallery-item:nth-child(1) img {
+                object-position: center 25%; /* Для фото с женой */
+            }
+            .gallery-item:nth-child(2) img {
+                object-position: center 40%; /* Для фото с машиной */
             }
         }
     </style>
